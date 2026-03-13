@@ -141,7 +141,6 @@ const AdminLogin = () => {
         {/* LEFT SIDE - Login Form */}
         <div className="col-12 col-lg-6 order-1 order-lg-1 d-flex align-items-center justify-content-center p-3 p-md-4 p-lg-4 bg-backdrop position-relative 
         ">
-          {/* Floating shapes */}
 
           <form onSubmit={handleLogin} className="flex-fill w-100">
             <div className="mx-auto mw-450">
@@ -389,7 +388,7 @@ const AdminLogin = () => {
                       className="mb-0 fw-bold"
                       style={{
                         fontSize: "clamp(18px, 4vw, 22px)",
-                        color: "#e5251b",
+                        color: "#3138a1",
                         wordBreak: "break-word",
                       }}
                     >

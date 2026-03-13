@@ -506,7 +506,7 @@ export const features = [
     title: "Quality in Every Services",
     description:
       "Quality isn’t just what we do, it’s who we are — reflected in every solution, and every moment we serve you.",
-    color: "#e5251b",
+    color: "#3138a1",
     bgPattern:
       "radial-gradient(circle at 20% 50%, rgba(220, 53, 69, 0.08) 0%, transparent 50%)",
   },
@@ -515,7 +515,7 @@ export const features = [
     title: "Prompt Response",
     description:
       "Instant support and real-time updates keeping your practice running smoothly 24/7.",
-    color: "#e5251b",
+    color: "#3138a1",
     bgPattern:
       "radial-gradient(circle at 80% 50%, rgba(200, 35, 51, 0.08) 0%, transparent 50%)",
   },
@@ -524,7 +524,7 @@ export const features = [
     title: "Reliable Services",
     description:
       "Our reliable services ensure you always have the support and solutions you need.",
-    color: "#e5251b",
+    color: "#3138a1",
     bgPattern:
       "radial-gradient(circle at 50% 50%, rgba(189, 33, 48, 0.08) 0%, transparent 50%)",
   },
