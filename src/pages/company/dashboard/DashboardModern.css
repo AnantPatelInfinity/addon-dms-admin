@@ -1,0 +1,231 @@
+/* Modern Dashboard Styles */
+
+.dashboard-modern-card {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  animation: fadeInUp 0.7s cubic-bezier(.4,2,.6,1);
+}
+.dashboard-modern-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-modern-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(31,38,135,0.08);
+  margin-bottom: 0;
+  animation: fadeInUp 0.8s cubic-bezier(.4,2,.6,1);
+}
+.dashboard-modern-table th, .dashboard-modern-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.dashboard-modern-table th {
+  background: rgba(240,240,255,0.7);
+  font-weight: 600;
+  color: #333;
+}
+.dashboard-modern-table tr {
+  transition: background 0.2s;
+}
+.dashboard-modern-table tbody tr:hover {
+  background: rgba(0,136,254,0.07);
+}
+
+@media (max-width: 768px) {
+  .dashboard-modern-card, .dashboard-modern-table {
+    border-radius: 10px;
+    font-size: 0.97rem;
+  }
+  .dashboard-modern-table th, .dashboard-modern-table td {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+/* Fast Actions Animation */
+.dashboard-fast-action {
+  animation: fadeInUp 0.6s cubic-bezier(.4,2,.6,1);
+}
+
+/* --- Summary Card Modern Design --- */
+.dashboard-summary-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+  border: none;
+  animation: fadeInUp 0.7s cubic-bezier(.4,2,.6,1);
+}
+.dashboard-summary-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.18);
+}
+.dashboard-summary-accent {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 6px;
+  border-radius: 20px 20px 0 0;
+}
+.dashboard-summary-accent.po { background: linear-gradient(90deg, #4f8cff, #6ed0fa); }
+.dashboard-summary-accent.service { background: linear-gradient(90deg, #34d399, #3b82f6); }
+.dashboard-summary-accent.install { background: linear-gradient(90deg, #a78bfa, #6366f1); }
+.dashboard-summary-icon {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  background: rgba(240,240,255,0.7);
+}
+.dashboard-summary-icon.po { color: #4f8cff; }
+.dashboard-summary-icon.service { color: #34d399; }
+.dashboard-summary-icon.install { color: #a78bfa; }
+.dashboard-summary-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.dashboard-summary-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.dashboard-summary-badge {
+  background: #f3f4f6;
+  color: #333;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  padding: 0.2rem 0.7rem;
+  margin-bottom: 1rem;
+}
+.dashboard-summary-progress {
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .dashboard-summary-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    border-radius: 12px;
+  }
+  .dashboard-summary-icon {
+    width: 38px; height: 38px; font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .dashboard-summary-value {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .dashboard-modern-card, .dashboard-modern-table {
+    font-size: 0.92rem;
+  }
+} 
+
+/* --- Fast Actions Modern Card --- */
+.dashboard-fastaction-card {
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 4px 24px 0 rgba(31,38,135,0.10);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 1.2rem 1rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  position: relative;
+  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s;
+  animation: fadeInUp 0.6s cubic-bezier(.4,2,.6,1);
+}
+.dashboard-fastaction-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.16);
+}
+.dashboard-fastaction-accent {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 6px;
+  border-radius: 16px 0 0 16px;
+}
+.dashboard-fastaction-accent.po { background: linear-gradient(180deg, #4f8cff, #6ed0fa); }
+.dashboard-fastaction-accent.service { background: linear-gradient(180deg, #34d399, #3b82f6); }
+.dashboard-fastaction-accent.install { background: linear-gradient(180deg, #a78bfa, #6366f1); }
+.dashboard-fastaction-accent.default { background: linear-gradient(180deg, #fbbf24, #f59e42); }
+.dashboard-fastaction-icon {
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  background: rgba(240,240,255,0.7);
+  font-size: 1.5rem;
+}
+.dashboard-fastaction-icon.po { color: #4f8cff; }
+.dashboard-fastaction-icon.service { color: #34d399; }
+.dashboard-fastaction-icon.install { color: #a78bfa; }
+.dashboard-fastaction-icon.default { color: #fbbf24; }
+.dashboard-fastaction-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+.dashboard-fastaction-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+}
+.dashboard-fastaction-btn {
+  margin-left: auto;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  padding: 0.2rem 0.7rem;
+  background: #f3f4f6;
+  color: #333;
+  border: none;
+  transition: background 0.18s;
+}
+.dashboard-fastaction-btn:hover {
+  background: #e0e7ef;
+}
+@media (max-width: 768px) {
+  .dashboard-fastaction-card {
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    border-radius: 10px;
+    gap: 0.7rem;
+  }
+  .dashboard-fastaction-icon {
+    width: 28px; height: 28px; font-size: 1.1rem;
+  }
+  .dashboard-fastaction-title {
+    font-size: 0.95rem;
+  }
+  .dashboard-fastaction-value {
+    font-size: 1.05rem;
+  }
+} 
