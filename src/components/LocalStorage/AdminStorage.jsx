@@ -28,6 +28,7 @@ export const getAdminStorage = () => {
         "DX_AD_FIRM_SN": localStorage.getItem("DX_AD_FIRM_SN"),
         "DX_AD_IMG": localStorage.getItem("DX_AD_IMG"),
         "AD_ID": localStorage.getItem("AD_ID"),
+        "DX_AD_ROLE": localStorage.getItem("DX_AD_ROLE"),
     }
     return adminStorage
 }

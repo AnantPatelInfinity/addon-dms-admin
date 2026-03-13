@@ -5,10 +5,12 @@ import CUSTOMER_URLS from '../../config/routesFile/customer.routes'
 import DEALER_URLS from '../../config/routesFile/dealer.routes'
 import COMPANY_URLS from '../../config/routesFile/company.routes'
 import { getCustomerStorage } from '../LocalStorage/CustomerStorage'
+import { getAdminStorage } from '../LocalStorage/AdminStorage'
 
 const BreadCrumbs = ({ crumbs = [] }) => {
 
-    const role = getCustomerStorage()
+    const role = getCustomerStorage();
+    const adminRole = getAdminStorage().DX_AD_ROLE;
 
     return (
         <div className="page-header">
@@ -17,7 +19,7 @@ const BreadCrumbs = ({ crumbs = [] }) => {
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item">
-                                {role.DX_ROLE === "admin" ? (
+                                {adminRole === "admin" ? (
                                     <Link to={ADMIN_URLS.DASHBOARD}>Dashboard</Link>
                                 ) : role.DX_ROLE === "customer" ? (
                                     <Link to={CUSTOMER_URLS.DASHBOARD}>Dashboard</Link>
