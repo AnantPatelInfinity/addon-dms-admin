@@ -1,16 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router'
-import ADMIN_URLS from '../../config/routesFile/admin.routes'
-import CUSTOMER_URLS from '../../config/routesFile/customer.routes'
-import DEALER_URLS from '../../config/routesFile/dealer.routes'
-import COMPANY_URLS from '../../config/routesFile/company.routes'
-import { getCustomerStorage } from '../LocalStorage/CustomerStorage'
-import { getAdminStorage } from '../LocalStorage/AdminStorage'
+import { Link, useLocation } from 'react-router'
+import { ROLE_DASHBOARD } from '../../config/DataFile'
 
 const BreadCrumbs = ({ crumbs = [] }) => {
 
-    const role = getCustomerStorage();
-    const adminRole = getAdminStorage().DX_AD_ROLE;
+
+    const location = useLocation();
+    const role = location.pathname.split("/")[1];
+
+    const dashboardLink = ROLE_DASHBOARD[role];
 
     return (
         <div className="page-header">
@@ -18,18 +16,11 @@ const BreadCrumbs = ({ crumbs = [] }) => {
                 <div className="col-12">
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb">
-                            <li className="breadcrumb-item">
-                                {adminRole === "admin" ? (
-                                    <Link to={ADMIN_URLS.DASHBOARD}>Dashboard</Link>
-                                ) : role.DX_ROLE === "customer" ? (
-                                    <Link to={CUSTOMER_URLS.DASHBOARD}>Dashboard</Link>
-                                ) : role.DX_ROLE === "dealer" ? (
-                                    <Link to={DEALER_URLS.DASHBOARD}>Dashboard</Link>
-                                ) : role.DX_ROLE === "company" ? (
-                                    <Link to={COMPANY_URLS.DASHBOARD}>Dashboard</Link>
-                                ) : null
-                                }
-                            </li>
+                            {dashboardLink && (
+                                <li className="breadcrumb-item">
+                                    <Link to={dashboardLink}>Dashboard</Link>
+                                </li>
+                            )}
                             {crumbs?.map((crumb, idx) => (
                                 <li
                                     key={idx}

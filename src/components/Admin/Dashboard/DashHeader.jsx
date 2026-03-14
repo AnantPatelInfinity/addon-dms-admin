@@ -20,7 +20,7 @@ const DashHeader = ({ dateRange, setDateRange, getDashboardData, loading, lastUp
     const [showDatePicker, setShowDatePicker] = useState(false);
     const [tempDateRange, setTempDateRange] = useState(dateRange);
     const [activeFilter, setActiveFilter] = useState(null); // Track active quick filter
-   
+
     const formatDateForDisplay = (dateString) => {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', {
@@ -65,7 +65,7 @@ const DashHeader = ({ dateRange, setDateRange, getDashboardData, loading, lastUp
         const endDate = new Date().toISOString().split('T')[0];
         const startDate = new Date(new Date().setDate(new Date().getDate() - 30)).toISOString().split('T')[0];
         const defaultRange = { startDate, endDate };
-        
+
         setDateRange(defaultRange);
         setTempDateRange(defaultRange);
         setActiveFilter(null);
@@ -116,8 +116,8 @@ const DashHeader = ({ dateRange, setDateRange, getDashboardData, loading, lastUp
                         <div className="d-flex align-items-center gap-2">
                             {hasActiveFilter() && (
                                 <>
-                                    <Badge 
-                                        bg="primary" 
+                                    <Badge
+                                        bg="primary"
                                         className="d-flex align-items-center px-2 py-1"
                                         style={{ fontSize: '0.7rem' }}
                                     >
@@ -141,7 +141,7 @@ const DashHeader = ({ dateRange, setDateRange, getDashboardData, loading, lastUp
                                 </>
                             )}
                         </div>
-                        
+
                         {/* Last Updated - Mobile */}
                         <small className="text-muted d-flex align-items-center">
                             <Clock size={12} className="me-1" />
@@ -156,8 +156,8 @@ const DashHeader = ({ dateRange, setDateRange, getDashboardData, loading, lastUp
                         <div className="d-none d-lg-flex align-items-center gap-2">
                             {hasActiveFilter() && (
                                 <>
-                                    <Badge 
-                                        bg="primary" 
+                                    <Badge
+                                        bg="primary"
                                         className="d-flex align-items-center px-2 py-1"
                                         style={{ fontSize: '0.75rem' }}
                                     >
@@ -223,27 +223,27 @@ const DashHeader = ({ dateRange, setDateRange, getDashboardData, loading, lastUp
                                     <div className="mb-3">
                                         <h6 className="mb-2 fw-bold" style={{ fontSize: '0.9rem' }}>Select date range</h6>
                                         <div className="d-flex flex-wrap gap-1 gap-sm-2 mb-3">
-                                            <Button 
-                                                variant={activeFilter === 'Last 7 days' ? 'primary' : 'outline-primary'} 
-                                                size="sm" 
+                                            <Button
+                                                variant={activeFilter === 'Last 7 days' ? 'primary' : 'outline-primary'}
+                                                size="sm"
                                                 className="flex-fill flex-sm-grow-0"
                                                 style={{ fontSize: '0.75rem', padding: '0.375rem 0.5rem' }}
                                                 onClick={() => setQuickRange(7, 'Last 7 days')}
                                             >
                                                 7 days
                                             </Button>
-                                            <Button 
-                                                variant={activeFilter === 'Last 30 days' ? 'primary' : 'outline-primary'} 
-                                                size="sm" 
+                                            <Button
+                                                variant={activeFilter === 'Last 30 days' ? 'primary' : 'outline-primary'}
+                                                size="sm"
                                                 className="flex-fill flex-sm-grow-0"
                                                 style={{ fontSize: '0.75rem', padding: '0.375rem 0.5rem' }}
                                                 onClick={() => setQuickRange(30, 'Last 30 days')}
                                             >
                                                 30 days
                                             </Button>
-                                            <Button 
-                                                variant={activeFilter === 'Last 90 days' ? 'primary' : 'outline-primary'} 
-                                                size="sm" 
+                                            <Button
+                                                variant={activeFilter === 'Last 90 days' ? 'primary' : 'outline-primary'}
+                                                size="sm"
                                                 className="flex-fill flex-sm-grow-0"
                                                 style={{ fontSize: '0.75rem', padding: '0.375rem 0.5rem' }}
                                                 onClick={() => setQuickRange(90, 'Last 90 days')}
@@ -278,17 +278,17 @@ const DashHeader = ({ dateRange, setDateRange, getDashboardData, loading, lastUp
                                         </Col>
                                     </Row>
                                     <div className="d-flex justify-content-end gap-2 mt-3">
-                                        <Button 
-                                            variant="outline-secondary" 
-                                            size="sm" 
+                                        <Button
+                                            variant="outline-secondary"
+                                            size="sm"
                                             onClick={cancelDateRange}
                                             style={{ fontSize: '0.8rem' }}
                                         >
                                             Cancel
                                         </Button>
-                                        <Button 
-                                            variant="primary" 
-                                            size="sm" 
+                                        <Button
+                                            variant="primary"
+                                            size="sm"
                                             onClick={applyDateRange}
                                             style={{ fontSize: '0.8rem' }}
                                         >
