@@ -1,3 +1,8 @@
+import ADMIN_URLS from "./routesFile/admin.routes";
+import COMPANY_URLS from "./routesFile/company.routes";
+import CUSTOMER_URLS from "./routesFile/customer.routes";
+import DEALER_URLS from "./routesFile/dealer.routes";
+
 export const statusList = [
   { value: 1, label: "Pending" },
   { value: 2, label: "Approved" },
@@ -5,10 +10,11 @@ export const statusList = [
 ];
 
 export const logos = {
-  LOGIN_LOGO: "/assets/img/dmplogo.svg",
+  LOGIN_LOGO: "/assets/img/logo.svg",
   X_TECH_LOGO: "/assets/img/xtech-logo.svg",
   // LOGIN_NEW: "/assets/img/login-logo.png",
-  LOGIN_NEW: "/assets/img/tech-care-logo.png",
+  LOGIN_NEW: "/assets/img/logo.svg",
+  SMALL_LOGO: "/assets/img/fev.svg",
   NO_PRO_IMAGE: "/assets/img/no-image.png",
 };
 
@@ -654,3 +660,10 @@ export const AERB_STATUS_OPTIONS = [
   { value: "REJECTED", label: "Rejected", bg: "badge bg-danger" },
 ];
 
+
+export const ROLE_DASHBOARD = {
+  admin: ADMIN_URLS.DASHBOARD,
+  customer: CUSTOMER_URLS.DASHBOARD,
+  dealer: DEALER_URLS.DASHBOARD,
+  company: COMPANY_URLS.DASHBOARD,
+};

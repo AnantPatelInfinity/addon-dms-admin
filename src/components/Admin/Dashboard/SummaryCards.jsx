@@ -17,7 +17,7 @@ const SummaryCards = ({ dashboardData }) => {
                         <Card.Body>
                             <div className="d-flex justify-content-between align-items-center mb-4">
                                 <div className="dashboard-summary-icon bg-primary">
-                                    <Wrench size={28} className="text-primary" aria-label="Total Services Icon" />
+                                    <Wrench size={28} className="text-red" aria-label="Total Services Icon" />
                                 </div>
                                 <div className="text-end">
                                     <div className="dashboard-summary-number">{dashboardData?.counts?.services?.total}</div>

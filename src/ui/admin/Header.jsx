@@ -35,7 +35,7 @@ const Header = ({ toggleMobileSidebar }) => {
                     />
                 </Link>
                 <Link to={ADMIN_URLS.DASHBOARD} className="logo-small">
-                    <img src={adminStorage.DX_AD_FIRM_SN === "DMP" ? logos.LOGIN_LOGO : logos.X_TECH_LOGO} alt="Logo" />
+                    <img src={adminStorage.DX_AD_FIRM_SN === "DMP" ? logos.SMALL_LOGO : logos.LOGIN_LOGO} alt="Logo" />
                 </Link>
                 <a id="toggle_btn" href="#" onClick={(e) => { e.preventDefault(); toggleButton(); }} className={`${isSidebarOpen ? "active" : ""}`}>
                     <i className="ti ti-arrow-bar-to-left" />
