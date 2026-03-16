@@ -15019,7 +15019,7 @@ button:focus {
 }
 
 .btn-soft-primary {
-  background-color: #f7bcb5 !important;
+  background-color: #eeeffe !important;
   color: #3138a1 !important;
 }
 
@@ -37185,7 +37185,7 @@ ul .btn-primary:not(:disabled):not(.disabled).active:focus {
 }
 
 .bg-soft-primary {
-  background-color: #f7bcb5;
+  background-color: #eeeffe;
   color: #3138a1;
 }
 
